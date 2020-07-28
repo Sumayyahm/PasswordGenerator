@@ -11,5 +11,16 @@ In this homework, I have made changes in the JS file as follows
    f. If user chooses any 3 types of characters, goes to function conditionTwo that generates a password using the 3 character types selected.
    g. If user chooses any 2 types of characters, goes to function conditionThree that generates a password using the 2 character types selected.  
    h. If the user chooses just 1 type of character in the password, goes to function conditionFour that generates a password using the selected char type.
-   NOTE: Steps 'e' through 'h' are executed using a series of if-else statements 
+   NOTE- Steps 'e' through 'h' are executed using a series of if-else statements 
    i. If the user doesn't select any of the char types, gives a alert to select atleast one char type.
+   
+   URL of the deployed website:  https://sumayyahm.github.io/PasswordGenerator/
+   
+   ![image](https://user-images.githubusercontent.com/66535567/88705581-57ed4380-d0d5-11ea-8804-5babf1f8cc25.png)
+   ScreenShot 
+   
+   
+   
+   
+   
+   
