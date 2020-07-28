@@ -13,6 +13,7 @@ In this homework, I have made changes in the JS file as follows
    h. If the user chooses just 1 type of character in the password, goes to function conditionFour that generates a password using the selected char type.
    NOTE- Steps 'e' through 'h' are executed using a series of if-else statements 
    i. If the user doesn't select any of the char types, gives a alert to select atleast one char type.
+ 4. When the Generate Password button is clicked on the webpage, writePassword function is accessed which in turn accesses the generatePassword function explained above and prints the returned value in the password text box. 
    
    URL of the deployed website:  https://sumayyahm.github.io/PasswordGenerator/
    
