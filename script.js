@@ -8,15 +8,15 @@
   var specialChars = ['!', '@', '#', '$', '%', '^', '&', '*', '+', '='];
  
 
- //Function to Generate random characters for the password
+ //Function to Generate random characters from a given array
   function generateRandomChar(array) {
     var randomIndex = Math.floor(Math.random() * array.length);
     var randomChar = array[randomIndex].charAt();
     return randomChar;
   }
 
-  //Condition1: Function to generate password for a mix of all chars
-  function conditionOne(i) {
+  //Condition1: Function to generate password for a mix of all 4 types of chars
+  function conditionOne(i) { 
     var x = i/4;
     var y = i%4;
     var m;
@@ -33,8 +33,8 @@
     for (m = 0; m < y; m++) {tempPass += generateRandomChar(lcase);}
     return tempPass;}
 
-  //Condition2 :Function to generate password for any 3 variable types
-  function conditionTwo(i,arr1,arr2,aar3) {
+  //Condition2 :Function to generate password for any 3 character types
+  function conditionTwo(i,arr1,arr2,arr3) {
     var x = i/3;
     var y = i%3;
     var m;
@@ -45,7 +45,7 @@
     for (m = 0; m < y; m++) {tempPass += generateRandomChar(arr1);}
     return tempPass;}
 
-    //Condition3 :Function to generate password for any 2 variable types
+    //Condition3 :Function to generate password for any 2 character types
   function conditionThree(i,arr1,arr2) {
     var x = i/2;
     var y = i%2;
@@ -56,7 +56,7 @@
     for (m = 0; m < y; m++) {tempPass += generateRandomChar(arr1);}
     return tempPass;}
     
-    //Condition4 : Function to generate password for just one variable type 
+    //Condition4 : Function to generate password for just one character type 
   function conditionFour(i,arr) {
     var tempPass = " ";
     for(var m = 0; m < i; m++){ tempPass += generateRandomChar(arr);}
@@ -76,50 +76,53 @@
        if ((a === true)&&(b === true)&&(c === true)&&(d === true))    // Condition 1
        {return conditionOne(numofChars) ;} 
        else 
-        if ((a === true)&&(b === true)&&(c == true)&&(d !== true))     // Condition 2
+        if ((a === true)&&(b === true)&&(c == true)&&(d !== true))     // Condition 2 using 3 char types
           { return conditionTwo(numofChars, lcase, ucase, nums);}
         else 
-          if ((a === true)&&(b === true)&&(c !== true)&&(d === true))      // Condition 2
+          if ((a === true)&&(b === true)&&(c !== true)&&(d === true))      // Condition 2  using 3 char types
           { return conditionTwo(numofChars, lcase, ucase, specialChars);}
           else
-           if ((a === true)&&(b !== true)&&(c === true)&&(d === true))       // Condition 2
+           if ((a === true)&&(b !== true)&&(c === true)&&(d === true))       // Condition 2  using 3 char types
             { return conditionTwo(numofChars, lcase, nums, specialChars);}
            else
-            if ((a !== true)&&(b === true)&&(c === true)&&(d === true))        // Condition 2
+            if ((a !== true)&&(b === true)&&(c === true)&&(d === true))        // Condition 2  using 3 char types
             { return conditionTwo(numofChars, ucase, nums, specialChars);}
             else
-             if ((a !== true)&&(b !== true)&&(c === true)&&(d === true))       //Condition 3
+             if ((a !== true)&&(b !== true)&&(c === true)&&(d === true))       //Condition 3  using 2 char types
               { return conditionThree(numofChars, nums, specialChars); }
              else
-              if ((a === true)&&(b === true)&&(c !== true)&&(d !== true))      //Condition 3
+              if ((a === true)&&(b === true)&&(c !== true)&&(d !== true))      //Condition 3 using 2 char types
               { return conditionThree(numofChars, lcase, ucase); }
               else
-               if ((a !== true)&&(b === true)&&(c !== true)&&(d === true))       //Condition 3
+               if ((a !== true)&&(b === true)&&(c !== true)&&(d === true))       //Condition 3 using 2 char types
                { return conditionThree(numofChars, ucase, specialChars); }
                else
-                if ((a === true)&&(b !== true)&&(c === true)&&(d !== true))     //Condition 3
+                if ((a === true)&&(b !== true)&&(c === true)&&(d !== true))     //Condition 3 using 2 char types
                  { return conditionThree(numofChars, lcase, nums); }
                 else
-                 if ((a === true)&&(b !== true)&&(c !== true)&&(d === true))        //Condition 3
+                 if ((a === true)&&(b !== true)&&(c !== true)&&(d === true))        //Condition 3 using 2 char types
                   { return conditionThree(numofChars, lcase, specialChars); }
                   else
-                   if ((a !== true)&&(b === true)&&(c === true)&&(d !== true))       //Condition 3
+                   if ((a !== true)&&(b === true)&&(c === true)&&(d !== true))       //Condition 3 using 2 char types
                     { return conditionThree(numofChars, ucase,nums); }
                     else
-                     if ((a !== true)&&(b !== true)&&(c === true)&&(d !== true))       //Condition 4
+                     if ((a !== true)&&(b !== true)&&(c === true)&&(d !== true))       //Condition 4 using 1 char type
                       { return conditionFour(numofChars, nums); }
                       else
-                      if ((a === true)&&(b !== true)&&(c !== true)&&(d !== true))       //Condition 4
+                      if ((a === true)&&(b !== true)&&(c !== true)&&(d !== true))       //Condition 4 using 1 char type
                        { return conditionFour(numofChars, lcase); }
                        else
-                       if ((a !== true)&&(b === true)&&(c !== true)&&(d !== true))       //Condition 4
+                       if ((a !== true)&&(b === true)&&(c !== true)&&(d !== true))       //Condition 4 using 1 char type
                         { return conditionFour(numofChars, ucase); }
                         else
-                        if ((a !== true)&&(b !== true)&&(c !== true)&&(d === true))       //Condition 4
+                        if ((a !== true)&&(b !== true)&&(c !== true)&&(d === true))       //Condition 4 using 1 char type
                          { return conditionFour(numofChars, specialChars); }
-                        else { alert("Please choose atleast one character type")}
+                        else 
+                        //If none of the char types are selected
+                        { alert("Please choose atleast one character type!")}
       }
     else
+    //If numofChars in Password is <8 or >128
     alert("Invalid Input!")
   }
     
@@ -127,9 +130,7 @@
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
